@@ -1,0 +1,79 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1f1f1f;
+    padding: 1rem 0;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar .nav-links li a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: #1e90ff;
+}
+
+/* Main content */
+.content {
+    padding: 2rem 0;
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer .social-media a {
+    margin: 0 0.5rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+footer .social-media a:hover {
+    color: #1e90ff;
+}
