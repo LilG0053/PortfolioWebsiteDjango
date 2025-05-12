@@ -148,4 +148,43 @@ footer .social-media a:hover {
     color: #1e90ff;
 }
 
+/* project page */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-title {
+    color: #1f1f1f;
+}
+
+.bg-purple {
+    background: #e7c1ea;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    display: none;
+}
+
+.project-card:hover .project-description {
+    display: block;
+}
+
+.project-image {
+    height: 200px;
+    object-fit: cover;
+}
+
 

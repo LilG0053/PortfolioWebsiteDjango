@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %} Projects {% endblock %}
+{% load static %}
+
+{% block content %}
+
+<div class="container py-5">
+    <h1 class="text-center mb-5 text-light">My Projects</h1>
+
+    <!-- Search Bar -->
+    <div class="mb-4 text-center flex-wrap">
+        <form method="get" action="{% url 'project_list' %}">
+            <input type="text" name="search" class="form-control w-50 mx-auto" placeholder="Search projects..." value="{{ search_query }}">
+            <button type="submit" class="btn btn-light mt-3">Search</button>
+        </form>
+    </div>
+
+    <!-- Tag Filtering -->
+    <div class="mb-4 text-center">
+        <h5 class="text-light">Filter by Tags</h5>
+        <div id="tags" class="d-flex justify-content-center flex-wrap mb-4">
+            <a href="?{% if search_query %}search={{ search_query }}&{% endif %}tag=None" class="btn btn-outline-light m-1 {% if selected_tag == None %}active{% endif %}">All</a>
+            {% for tag in tags %}
+                <a href="?{% if search_query %}search={{ search_query }}&{% endif %}tag={{ tag.name }}" class="btn btn-outline-light m-1 {% if tag.name == selected_tag%}active{% endif %}">
+                    {{ tag.name }}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Project Tiles -->
+    <div class="row g-4">
+        {% for project in projects %}
+            <div class="col-md-4 project-tile mb-4">
+                <div class="card h-100 project-card" onclick="window.location.href='{{ project.url }}'">
+                    <img src="{{ project.image.url }}" class="card-img-top project-image" alt="{{ project.title }}">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ project.title }}</h5>
+                        <div class="tags mb-2">
+                            {% for tag in project.tags.all %}
+                                <span class="badge bg-purple text-dark">{{ tag.name }}</span>
+                            {% endfor %}
+                        </div>
+                        <p class="card-text">{{ project.description }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
