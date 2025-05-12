@@ -22,7 +22,7 @@
         <div id="tags" class="d-flex justify-content-center flex-wrap mb-4">
             <a href="?{% if search_query %}search={{ search_query }}&{% endif %}tag=None" class="btn btn-outline-light m-1 {% if selected_tag == None %}active{% endif %}">All</a>
             {% for tag in tags %}
-                <a href="?{% if search_query %}search={{ search_query }}&{% endif %}tag={{ tag.name }}" class="btn btn-outline-light m-1 {% if tag.name == selected_tag%}active{% endif %}">
+                <a href="?{% if search_query %}search={{ search_query }}&{% endif %}tag={{ tag.name | urlencode }}" class="btn btn-outline-light m-1 {% if tag.name == selected_tag%}active{% endif %}">
                     {{ tag.name }}
                 </a>
             {% endfor %}

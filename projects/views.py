@@ -17,6 +17,7 @@ def project_list(request):
     # Filter by selected tag if provided, None tag is referred to as a string
     if selected_tag and str(selected_tag) != 'None':
         projects = projects.filter(tags__name=selected_tag)
+        print(f"Selected tag: {selected_tag}")
 
     # Filter by search query if provided
     if search_query:
