@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Ethan Kimmel{% endblock %}</title>
     <!-- Bootstrap CSS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
@@ -12,28 +11,20 @@
 </head>
 <body class="bg-dark text-light d-flex flex-column min-vh-100">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg border-bottom border-secondary">
-        <div class="container">
-            <a class="navbar-brand logo" href="{% url 'home' %}">Ethan Kimmel</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav nav-links">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'project_list' %}">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'skill_list' %}">Skills</a>
-                    </li>
-                </ul>
+<!-- Navbar -->
+<nav class="navbar border-bottom border-secondary">
+    <div class="d-flex">
+        <div class="nav-links">
+            <a href="{% url 'home' %}" class="title-link">Ethan Kimmel</a>
+            <div class="vertical-separator me-4"></div>
+            <div class="nav-links d-flex">
+              <a href="{% url 'project_list' %}">Projects</a>
+              <a href="{% url 'skill_list' %}">Skills</a>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
     <!-- Main Content -->
     <main class="flex-fill content">
@@ -44,12 +35,12 @@
     <!-- Footer -->
     <footer class="text-center text-muted py-3 border-top border-secondary">
         <div class="container">
-            <small>&copy; {{ current_year }} Ethan Kimmel</small>
             <div class="social-media mt-2">
                 <!-- Example social icons -->
                 <a href="https://github.com/yourusername" target="_blank">GitHub</a>
                 <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
             </div>
+            <small>&copy; 2025 Ethan Kimmel</small>
         </div>
     </footer>
 
