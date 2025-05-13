@@ -2,7 +2,6 @@ from django.shortcuts import render
 from .models import Project, Tag
 
 
-
 def project_list(request):
     # Get all tags to display in the filter section
     tags = Tag.objects.all()
@@ -16,7 +15,8 @@ def project_list(request):
 
     # Filter by selected tag if provided, None tag is referred to as a string
     if selected_tag and str(selected_tag) != 'None':
-        projects = projects.filter(tags__name=selected_tag)
+        tag_list = selected_tag.split(',')
+        projects = projects.filter(tags__name__in=tag_list).distinct()
         print(f"Selected tag: {selected_tag}")
 
     # Filter by search query if provided

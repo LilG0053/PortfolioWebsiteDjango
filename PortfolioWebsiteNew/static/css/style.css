@@ -84,6 +84,10 @@ a:hover {
     opacity: 0.5;
 }
 
+.copyright {
+    color: #a1a1a1;
+}
+
 /* Main content */
 .content {
     padding: 2rem 0;
@@ -186,5 +190,42 @@ footer .social-media a:hover {
     height: 200px;
     object-fit: cover;
 }
+
+/* Skill page */
+.skill-card {
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 40px rgba(255, 255, 255, 1);
+}
+
+.bg-lightpurple {
+    background-color: #e7c1ea;
+    color: #1f1f1f; /* Dark text for contrast */
+}
+
+.btn-light {
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+.description-box {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.description-box:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
 
 
