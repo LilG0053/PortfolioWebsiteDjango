@@ -9,7 +9,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
-<body class="bg-dark text-light d-flex flex-column min-vh-100">
+<body class="bg-darkpurple text-light d-flex flex-column min-vh-100">
 
 <!-- Navbar -->
 <nav class="navbar border-bottom border-secondary">
@@ -20,6 +20,7 @@
             <div class="nav-links d-flex">
               <a href="{% url 'project_list' %}">Projects</a>
               <a href="{% url 'skill_list' %}">Skills</a>
+              <a href="{% url 'resume' %}">Resume</a>
             </div>
         </div>
     </div>
@@ -39,6 +40,7 @@
                 <!-- Example social icons -->
                 <a href="https://github.com/LilG0053" target="_blank">GitHub</a>
                 <a href="https://www.linkedin.com/in/ethankimmel5" target="_blank">LinkedIn</a>
+                <a href="mailto:ethankimmel134532@gmail.com">Email Me</a>
             </div>
             <small class="copyright">&copy; 2025 Ethan Kimmel</small>
         </div>

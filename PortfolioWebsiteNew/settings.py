@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'projects',
     'skills',
     'home',
+    'PortfolioWebsiteNew',
 ]
 
 MIDDLEWARE = [
