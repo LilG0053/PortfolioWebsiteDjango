@@ -51,10 +51,18 @@ a:hover {
 }
 
 .navbar .nav-links .nav-link {
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: 500;
     padding: 0.75rem 1rem;
     color: #f0f0f0;
+}
+
+.nav-link {
+    font-size: 1.25rem;
+}
+
+.navbar .navbar-nav {
+  gap: 1rem;
 }
 
 .nav-links {
@@ -64,7 +72,7 @@ a:hover {
 }
 
 .nav-links a {
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: 500;
   color: #f0f0f0;
   padding: 0.5rem 1rem;
@@ -81,6 +89,10 @@ a:hover {
     font-weight: bold;
     color: #a1a1a1;
     margin-left: 1rem;
+}
+
+.navbar-toggler {
+  border-color: #aaa;
 }
 
 .vertical-separator {
