@@ -7,39 +7,41 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0b0b0b;
+    background-color: #2b3759;
     color: #ffffff;
     line-height: 1.6;
 }
 
-.bg-darkpurple {
-    background-color: #25203a; /* Replace #1d2024 */
-    color: #f0f0f0;
+.bg-darkblue {
+    background-color: #383c49;
+    color: #ffffff;
 }
 
 a {
-    color: #a259ff;
+    color: #7aa0ff;
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #aac8ff;
 }
+
 
 /* Container */
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
 /* Navbar */
 .navbar {
-    background-color: #1f1f1f;
+    background-color: #1b263b;
     padding: 1rem 0;
     border-bottom: 1px solid #444;
     position: sticky;
     top: 0;
+    z-index: 999; /* Fixes layering issues */
 }
 
 .navbar .logo {
@@ -71,7 +73,7 @@ a:hover {
 }
 
 .nav-links a:hover {
-  color: #a259ff;
+  color: #59d3ff;
 }
 
 .navbar .title-link {
@@ -138,7 +140,8 @@ a:hover {
 
 /* Footer */
 footer {
-    background-color: #1f1f1f;
+    background-color: #1b263b;
+    color: #ffffff;
     padding: 1rem 0;
     bottom: 0;
     text-align: center;
@@ -153,7 +156,7 @@ footer .social-media a {
 }
 
 footer .social-media a:hover {
-    color: #a259ff;
+    color: #62b6cb;
 }
 
 /* project page */
@@ -167,8 +170,8 @@ footer .social-media a:hover {
     color: #1f1f1f;
 }
 
-.bg-purple {
-    background: #e7c1ea;
+.bg-blue {
+    background: #8ca3d9;
 }
 
 .project-card:hover {
@@ -185,7 +188,7 @@ footer .social-media a:hover {
 }
 
 .card-body {
-    background: #3e3550;
+    background: #3a4a6f;
 }
 .project-card:hover .project-description {
     display: block;
@@ -198,17 +201,21 @@ footer .social-media a:hover {
 
 /* Skill page */
 .skill-card {
+    background-color: #3a4a6f;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* thin white border */
     border-radius: 1rem;
-    background-color: #3e3550; /* Slightly lighter muted purple */
-    color: #f0f0f0; /* Light text for contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 1.5rem; /* Add padding for better content spacing */
-    border: 1px solid #5a3d61; /* Slightly lighter border to give more separation */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Add shadow to make it pop more */
+    padding: 1rem;
 }
 
 .card-text {
     color: #d3d3d3;
+}
+
+.skill-card .card-body {
+    padding-top: 0.5rem;  /* Reduce padding at the top */
 }
 
 .card-title {
@@ -220,8 +227,8 @@ footer .social-media a:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Subtle glow effect on hover */
 }
 
-.bg-lightpurple {
-    background-color: #2b1a39;
+.bg-lightblue {
+    background-color: #362d42;
     color: #1f1f1f; /* Dark text for contrast */
 }
 
@@ -229,10 +236,14 @@ footer .social-media a:hover {
     border-radius: 0.5rem;
     font-weight: bold;
     color: #f0f0f0; /* Light text for button contrast */
-    background-color: #5e3b6e; /* A brighter purple for button */
+    background-color: #517294; /* A brighter blue for button */
     border: none;
     padding: 0.75rem 1.25rem;
     transition: background-color 0.3s ease;
+}
+
+.btn-light:hover {
+    background-color: #62b6cb;
 }
 
 .description-box {

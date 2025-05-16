@@ -12,7 +12,7 @@
     <div class="mb-4 text-center flex-wrap">
         <form method="get" action="{% url 'project_list' %}">
             <input type="text" name="search" class="form-control w-50 mx-auto" placeholder="Search projects..." value="{{ search_query }}">
-            <button type="submit" class="btn btn-light mt-3">Search</button>
+                <button type="submit" class="btn btn-light mt-3">Search</button>
         </form>
     </div>
 
@@ -39,7 +39,7 @@
                         <h5 class="card-title">{{ project.title }}</h5>
                         <div class="tags mb-2">
                             {% for tag in project.tags.all %}
-                                <span class="badge bg-purple text-dark">{{ tag.name }}</span>
+                                <span class="badge bg-blue text-dark">{{ tag.name }}</span>
                             {% endfor %}
                         </div>
                         <p class="card-text">{{ project.description }}</p>
